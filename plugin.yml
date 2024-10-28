@@ -1,0 +1,5 @@
+author: matejkoo
+description: QoL features like stairs and gold pickaxe working as silktouch
+main: main.java.org.matejko.plugin.QoL
+name: QoL
+version: 1
