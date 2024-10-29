@@ -44,6 +44,13 @@ public class QoL extends JavaPlugin implements Listener {
                 block.setTypeId(0); // Set the block to air to remove it
             }
         }
+            // Check if the block is grass (ID: 2)
+            if (block.getTypeId() == 2) {
+                // Check if the player is using a gold shovel (ID: 284)
+                if (player.getInventory().getItemInHand().getTypeId() == 284) {
+                    block.getWorld().dropItem(block.getLocation().add(0.5, 0.5, 0.5), new ItemStack(block.getTypeId(), 1)); // Drop block itself at the center
+                    block.setTypeId(0); // Set the block to air to remove it
+                }
+            }
     }
-
 }
